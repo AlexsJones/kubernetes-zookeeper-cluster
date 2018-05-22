@@ -1,14 +1,12 @@
 # kubernetes-zookeeper-cluster
 
+## Requirements
 
-I don't claim any credit here, completely based on kow3ns work with a few minor tweaks.
-Easy to deploy and production ready.
+`go get github.com/AlexsJones/vortex`
 
-Wonderful!
+`./build_environment.sh small.yaml`
 
-
-Based on https://github.com/kow3ns/kubernetes-zookeeper
-And: https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/
+`kubectl create -f deployment/`
 
 Test with
 ```

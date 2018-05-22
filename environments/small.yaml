@@ -1,0 +1,6 @@
+image: "gcr.io/google_containers/kubernetes-zookeeper:1.0-3.4.10"
+memoryrequest: "1Gi"
+cpurequest: "0.5"
+servers: 1
+heapsize: 512M
+storagesize: 10Gi
