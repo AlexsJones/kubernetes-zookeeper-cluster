@@ -1,6 +1,7 @@
 apiVersion: apps/v1beta1
 kind: StatefulSet
 metadata:
+  namespace: zk
   name: zk
 spec:
   serviceName: zk-hs
