@@ -14,16 +14,20 @@ spec:
       labels:
         app: zk
     spec:
+      {{- if .affinity_key }}
+      {{- if .affinity_selector }}
       affinity:
-        podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-                matchExpressions:
-                  - key: "app"
-                    operator: In
-                    values:
-                    - zk
-              topologyKey: "kubernetes.io/hostname"
+        nodeAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            preference:
+              matchExpressions:
+              - key: {{.affinity_key}}
+                operator: In
+                values:
+                - {{.affinity_selector}}
+      {{- end }}
+      {{- end }}
       containers:
       - name: kubernetes-zookeeper
         imagePullPolicy: Always
