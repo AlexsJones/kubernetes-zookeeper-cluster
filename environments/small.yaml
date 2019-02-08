@@ -1,6 +1,8 @@
 image: "gcr.io/google_containers/kubernetes-zookeeper:1.0-3.4.10"
 memoryrequest: "500m"
 cpurequest: "0.5"
+memorylimit: "500m"
+cpulimit: "0.5"
 servers: 1
 heapsize: 256M
 storagesize: 10Gi

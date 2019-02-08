@@ -36,6 +36,9 @@ spec:
           requests:
             memory: {{.memoryrequest}}
             cpu: {{.cpurequest}}
+          limits:
+            memory: {{.memorylimit}}
+            cpu: {{.cpulimit}}
         ports:
         - containerPort: 2181
           name: client
