@@ -2,9 +2,9 @@
 
 ## Requirements
 
-`go get github.com/AlexsJones/vortex`
+_Set the environment size you want to use e.g. small_
 
-`./build_environment.sh small.yaml`
+`docker run -v $PWD:/tmp tibbar/vortex:v1 -template /tmp/templates -output /tmp/deployment -varpath /tmp/environments/small.yaml`
 
 `kubectl create -f deployment/`
 
