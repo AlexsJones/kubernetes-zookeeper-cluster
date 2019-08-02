@@ -4,9 +4,10 @@
 
 _Set the environment size you want to use e.g. small_
 
-`docker run -v $PWD:/tmp tibbar/vortex:v1 -template /tmp/templates -output /tmp/deployment -varpath /tmp/environments/small.yaml`
+- `docker run -v $PWD:/tmp tibbar/vortex:v1 -template /tmp/templates -output /tmp/deployment -varpath /tmp/environments/small.yaml`
 
-`kubectl create -f deployment/`
+
+- `kubectl create -f deployment/`
 
 Test with
 ```
